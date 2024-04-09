@@ -1,18 +1,26 @@
-<style>
-    /* Estilos para el cuerpo de la página */
-    body {
-        background-image: url('assets/image/fondoamitie2.png'); 
-        background-size: cover; 
-        background-position: center; 
-        background-repeat: no-repeat; 
-        background-color: rgba(255, 255, 255, 0.5); 
-        margin: 0; 
-        padding: 0; 
-        font-family: Arial, sans-serif;
-        opacity: 100; 
-    }
-    /* Estilos para el layout */
-    .layout {
-        
-    }
+<style is:global>
+	:root {
+		color-scheme: light dark;
+	}
+
+	html {
+		
+		scroll-behavior: smooth;
+	}
+	
+	body {
+		background: linear-gradient(to bottom, #f4bcff, #bb99fa);;
+		color: #fff;
+		display: flex;
+		margin: 0;
+		flex-direction: column;
+		min-height: 100vh;
+	}
+	
+	@media (prefers-reduced-motion: reduce) {
+		html {
+			scroll-behavior: auto;
+		}
+	}
+	
 </style>
