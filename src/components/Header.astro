@@ -1,38 +1,35 @@
 ---
-import HeaderButton from '../components/HeaderButton.astro';
-import HomeIcon from './icons/HomeIcon.astro';
-import AboutIcon from './icons/AboutIcon.astro';
-import ContactIcon from './icons/ContactIcon.astro';
-import ServicesIcon from './icons/ServicesIcon.astro';
-
 ---
-<header class="flex justify-center items-center py-5 w-full xl:w-[1120px] mx-auto">
-    <nav class="flex flex-row gap-x-20 opacity-80">
-        <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-wrap items-center justify-center">
-                <!-- Logo -->
-            <div class="flex-shrink-0">
+
+<header class="flex flex-col justify-center items-center py-5 w-full xl:w-[1120px] mx-auto">
+    <div class="max-w-5xl px-8 py-24 pb-12 mx-auto 2xl:max-w-7xl md:px-lg:px-24 lg:pt-32">
+        <div class="flex items-center mb-8">
+            <div>
+                <img class="inline-block object-cover w-24 h-48 rounded-full lg:w-64 lg:h-96"
+                    src="assets/image/veroperson.jpeg"
+                >
             </div>
-            <!-- Botones del Navbar -->
-            <HeaderButton class="bg-blue-600 text-white hover:bg-blue-700 hover:text-white px-4 py-2 rounded-lg" 
-                href="/">
-                    <HomeIcon/>
-                        Home
-            </HeaderButton>
-            <HeaderButton class="bg-blue-600 text-white hover:bg-blue-700 hover:text-white px-4 py-2 rounded-lg" 
-                href="/about">
-                    <AboutIcon/>
-                        Sobre Mí
-            </HeaderButton>
-            <HeaderButton class="bg-blue-600 text-white hover:bg-blue-700 hover:text-white px-4 py-2 rounded-lg" 
-                href="/contact">
-                    <ContactIcon/>
-                        Contacto
-            </HeaderButton>
-            <HeaderButton class="bg-blue-600 text-white hover:bg-blue-700 hover:text-white px-4 py-2 rounded-lg" 
-                href="/services">
-                    <ServicesIcon/>
-                        Servicios
-            </HeaderButton>
+            <div class="ml-4 md:ml-8">
+                <h1 class="text-4xl font-semibold tracking-tighter text-gray-900 md:text-6xl lg:text-7xl dark:text-white">
+                  <span class="typed-text">Veronica Villalva</span>
+                  <span class="block text-gray-500 dark:text-gray-400">Psicologa</span>
+                </h1>
+              </div>
         </div>
-    </nav>
+    </div>
 </header>
+
+<style>
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+
+  .typed-text {
+    display: inline-block;
+    overflow: hidden;
+    border-right: .15em solid orange; /* Ajusta el color del cursor de escritura */
+    white-space: nowrap;
+    animation: typing 3s steps(40, end); /* Ajusta la duración de la animación */
+  }
+</style>

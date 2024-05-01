@@ -1,26 +1,38 @@
 <style is:global>
 	:root {
-		color-scheme: light dark;
+	  color-scheme: light dark;
+	  --bg-color-light: #ffffff; /* Color de fondo en modo claro */
+	  --text-color-light: #333333; /* Color del texto en modo claro */
+	  --bg-color-dark: #111111; /* Color de fondo en modo oscuro */
+	  --text-color-dark: #ffffff; /* Color del texto en modo oscuro */
+	}
+  
+	html {
+	  scroll-behavior: smooth;
+	}
+  
+	body {
+	  --bg-color-light: #f4bcff; /* Color de fondo en modo claro */
+	  --bg-color-dark: #111111; /* Color de fondo en modo oscuro */
+	  background: var(--bg-color-light); /* Utiliza la variable para el color de fondo */
+	  color: #fff;
+	  display: flex;
+	  margin: 0;
+	  flex-direction: column;
+	  min-height: 100vh;
+	  transition: background-color 0.3s; /* Agrega una transición para suavizar el cambio */
 	}
 
-	html {
-		
-		scroll-behavior: smooth;
+	@media (prefers-color-scheme: dark) {
+	  body {
+		background: var(--bg-color-dark); /* Cambia el color de fondo en modo oscuro */
+	  }
 	}
-	
-	body {
-		background: linear-gradient(to bottom, #f4bcff, #bb99fa);;
-		color: #fff;
-		display: flex;
-		margin: 0;
-		flex-direction: column;
-		min-height: 100vh;
-	}
-	
+  
 	@media (prefers-reduced-motion: reduce) {
-		html {
-			scroll-behavior: auto;
-		}
+	  html {
+		scroll-behavior: auto;
+	  }
 	}
-	
-</style>
+  </style>
+  

@@ -1,7 +1,7 @@
 ---
-import Header from '../components/Header.astro';
+import Navbar from '../components/Navbar.astro';
 import Footer from '../components/Footer.astro';
-
+import BackGround from '../components/BackGround.astro';
 interface Props {
 	title: string
     description: string
@@ -24,13 +24,10 @@ const { description,  title } = Astro.props;
     </head>
 
     <body>
-        <Header />
+        <Navbar />
         <slot />
-        <Footer />        
+        <Footer />
+        <BackGround />
     </body>
     
 </html>
-
-
-
-
